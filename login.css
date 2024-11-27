@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('acpc-systems.jpg'); /* Add background image */
+  background-image: url('acpc-systems-blur.jpg'); /* Add background image */
   background-size: contain; /* Ensure the image covers the entire container */
   background-position: center; /* Center the background image */
   background-repeat: repeat; /* Prevent the image from repeating */
