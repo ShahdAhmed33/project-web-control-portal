@@ -4,7 +4,7 @@
   border-bottom: 1px solid black;
   flex-direction: row;
   padding: 1.5%;
-  height: 8vh;
+  height: 13vh;
 
 }
 .user{
@@ -24,4 +24,5 @@
 .logo{
     width: 90px;
     height: 90px;
+    
 }

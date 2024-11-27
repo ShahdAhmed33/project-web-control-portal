@@ -10,9 +10,10 @@
     padding: 150px;
     display: flex;
     flex-wrap: nowrap;
-    margin-top: 10px;
+    margin-top: 50px;
     overflow-x: auto;
     text-align: center;
     white-space: nowrap;
-    ;
+    
+    
 } 

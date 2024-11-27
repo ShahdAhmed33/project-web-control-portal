@@ -1,0 +1,89 @@
+.mainParentContainer{
+    background-color: #f8f9fa; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Add padding for spacing */
+    
+}
+
+
+
+.parentContainer {
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    gap: 150px; /* Adjust the gap between the first and second div */
+    padding: 20px; /* Optional: Add padding for spacing */
+    /* background-color: #f8f9fa; Light background color */
+    /* border-radius: 10px; Rounded corners */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Subtle shadow */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 150px; /* Adjust the gap between elements */
+    padding: 20px; /* Optional: Add padding for spacing */
+    /* background-color: #f8f9fa; Light background color */
+    /* border-radius: 10px; Rounded corners */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Subtle shadow */
+}
+
+.customButton {
+    margin-right: 10px; /* Space between the Options button and other elements */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.customButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.customButton1 {
+    margin-right: 10px; /* Space between the Reset button and the Options button */
+    padding: 10px; /* Adjust padding as needed */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    
+}
+
+.customButton1:hover {
+    background-color: #6c757d; /* Darker grey on hover */
+}
+
+.text {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+    padding: 10px;
+    text-align: center;
+    color: #343a40; /* Darker text color */
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    gap: 100px; /* Adjust the gap between elements */
+    padding: px; /* Optional: Add padding for spacing */
+    /* background-color: #e9ecef; Slightly darker background color */
+    /* border-radius: 10px; Rounded corners */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Subtle shadow */
+    margin-top: 20px; /* Space between the two containers */
+}
+
+
+.customInput {
+    
+    width: 150px; /* Adjust width as needed */
+    padding: 9px; /* Add padding for better appearance */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    
+}
+
+.containerModified {
+    margin-top: 20px; /* Space from previous section */
+    width: 80%; /* Ensure the container spans the full width */
+}
+
+
+.customInput:focus {
+    border-color: #80bdff; /* Border color on focus */
+    outline: none; /* Remove default outline */
+}
