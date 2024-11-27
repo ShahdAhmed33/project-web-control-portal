@@ -5,7 +5,7 @@ import style from './DHCP.module.css'; // Import custom CSS file
 
 const DHCP = () => {
     return (
-        <div className={style.mainParentContainer}>
+        <div>
         <div className={style.parentContainer}>
             <div className={style.container}>
                 <button className={`btn btn-info btn-lg dropdown-toggle ${style.customButton}`} type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -16,7 +16,7 @@ const DHCP = () => {
                     <li><button className="dropdown-item" type="button">option2</button></li>
                     <li><button className="dropdown-item" type="button">option3</button></li>
                 </ul>
-                <p className={style.text}>Scopes Reservation</p>
+                <h3 className={style.text}>Scopes Reservation</h3>
                 <button className={`btn btn-secondary btn-lg ${style.customButton1} ms-0`} type="button">
                     Reset
                 </button>
