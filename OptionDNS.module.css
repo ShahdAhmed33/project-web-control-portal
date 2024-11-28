@@ -1,0 +1,51 @@
+/* OptionDNS.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.save {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+}
+
+button.start-over {
+    background-color: #f44336; /* Red background */
+    color: white; /* White text */
+}

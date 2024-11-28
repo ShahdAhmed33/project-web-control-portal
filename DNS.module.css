@@ -1,0 +1,18 @@
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    margin-right: 100px;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
