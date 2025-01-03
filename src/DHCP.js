@@ -1,26 +1,22 @@
-import React from 'react';
-import styles from './DHCP.module.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route } from 'react-router-dom';
+import DHCPLayout from './DHCPLayout';
+import Options from './Options';
+import Scopes from './Scopes';
+import Reservation from './Reservation';
+import Restart from './Restart';
 
-const DHCP = () => {
+function App() {
     return (
-        <nav className={styles.navbar}>
-            <ul className={styles['navbar-nav']}>
-                <li className={styles['nav-item']}>
-                    <a className={styles['nav-link']} href="#">Options</a>
-                </li>
-                <li className={styles['nav-item']}>
-                    <a className={styles['nav-link']} href="#">Scopes</a>
-                </li>
-                <li className={styles['nav-item']}>
-                    <a className={styles['nav-link']} href="#">Reservation</a>
-                </li>
-                <li className={styles['nav-item']}>
-                    <a className={styles['nav-link']} href="#">Restart</a>
-                </li>
-            </ul>
-        </nav>
+        <Routes>
+            <Route path="/" element={<DHCPLayout />}>
+                {/* Child Routes */}
+                <Route path="options" element={<Options />} />
+                <Route path="scopes" element={<Scopes />} />
+                <Route path="reservation" element={<Reservation />} />
+                <Route path="restart" element={<Restart />} />
+            </Route>
+        </Routes>
     );
-};
+}
 
-export default DHCP;
+export default App;

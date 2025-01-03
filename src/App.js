@@ -36,7 +36,7 @@ const App = () => {
               <div className={styles.nav}>
                 <Routes>
                   <Route path="/General" element={<General />} />
-                  <Route path="/dhcp" element={<DHCP />} />
+                  <Route path="/dhcp/*" element={<DHCP />} />
                   <Route path="/dns" element={<DNS />} />
                   <Route path="/dns-manager" element={<DNSManager />} /> {/* Add the route for DNSManager */}
                   <Route path="/boot-and-grub" element={<BootandGRUB />} />

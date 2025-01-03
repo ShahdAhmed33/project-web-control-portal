@@ -27,6 +27,7 @@
 
 .nav-item {
     font-size: 1rem;
+    margin: 0 20px;
 }
 
 .nav-link {
@@ -36,5 +37,5 @@
 }
 
 .nav-link:hover {
-    color: #adb5bd; /* Light gray on hover */
+    color: #adb5bd; /* Light gray text color */
 }
