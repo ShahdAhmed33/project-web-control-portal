@@ -1,67 +1,67 @@
-import React, { useState } from 'react';
-
+import React, { useState, useRef } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 const FileOperations = () => {
-    const [filePath, setFilePath] = useState('');
-    const [content, setContent] = useState('');
+    const [uploading, setUploading] = useState(false);
+    const [publishTarget, setPublishTarget] = useState('All');
+    const fileInputRef = useRef(null);
 
-    // Simulate reading a file
-    const readFile = () => {
-        try {
-            // Simulate file content
-            const data = 'Simulated file content';
-            alert(`File content: ${data}`);
-        } catch (err) {
-            alert(`Error reading file: ${err}`);
-        }
+    const handleUpload = () => {
+        setUploading(true);
+        setTimeout(() => {
+            setUploading(false);
+            alert('File uploaded successfully');
+        }, 2000); // Simulate upload time
     };
 
-    // Simulate writing to a file
-    const writeFile = () => {
-        try {
-            // Simulate writing content
-            alert(`File written successfully with content: ${content}`);
-        } catch (err) {
-            alert(`Error writing file: ${err}`);
-        }
+    const handleBrowse = () => {
+        fileInputRef.current.click();
     };
 
-    // Simulate appending to a file
-    const appendFile = () => {
-        try {
-            // Simulate appending content
-            alert(`Content appended successfully: ${content}`);
-        } catch (err) {
-            alert(`Error appending file: ${err}`);
-        }
+    const handlePublish = () => {
+        alert(`Publishing to ${publishTarget}`);
+    };
+
+    const handleFilterChange = () => {
+        setPublishTarget(publishTarget === 'All' ? 'Specific' : 'All');
     };
 
     return (
-        <div className="container mt-5">
-            <h1>File Operations</h1>
-            <div className="mb-3">
-                <label htmlFor="filePath" className="form-label">File Path</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    id="filePath"
-                    value={filePath}
-                    onChange={(e) => setFilePath(e.target.value)}
-                    placeholder="Enter file path"
-                />
+        <div className="container mt-4">
+             <div className="mb-3">
+                <label className="form-label">Background:</label>
             </div>
             <div className="mb-3">
-                <label htmlFor="content" className="form-label">Content</label>
-                <textarea
-                    className="form-control"
-                    id="content"
-                    value={content}
-                    onChange={(e) => setContent(e.target.value)}
-                    placeholder="Enter content"
-                ></textarea>
+                <label className="form-label">Choose file:</label>
+                <input type="file" ref={fileInputRef} className="form-control" style={{ display: 'none' }} />
+                <button onClick={handleBrowse} className="btn btn-primary me-2">Browse</button>
+                <button onClick={handleUpload} className="btn btn-success">Upload</button>
             </div>
-            <button onClick={readFile} className="btn btn-primary me-2">Read File</button>
-            <button onClick={writeFile} className="btn btn-success me-2">Write File</button>
-            <button onClick={appendFile} className="btn btn-warning">Append File</button>
+            <div className="mb-3">
+                <label className="form-label">Upload Status:</label>
+                {uploading && <progress className="form-control" style={{ width: '100%', height: '20px' }} />}
+            </div>
+            <div className="mb-3">
+                <label className="form-label">Samples</label>
+                <button onClick={handlePublish} className="btn btn-primary me-2">Publish</button>
+                <button onClick={handleFilterChange} className="btn btn-secondary">Filter: {publishTarget}</button>
+            </div>
+            <div className="mb-3">
+                <label className="form-label">Per team progress:</label>
+                <progress className="form-control" style={{ width: '100%', height: '20px' }} />
+            </div>
+            <div className="mb-3">
+                <label className="form-label">Overall progress:</label>
+                <progress className="form-control" style={{ width: '100%', height: '20px' }} />
+            </div>
+            <div className="mb-3">
+                <label className="form-label">JudgeCases</label>
+                <button onClick={handlePublish} className="btn btn-primary me-2">Publish</button>
+                <button onClick={handleFilterChange} className="btn btn-secondary">Filter: {publishTarget}</button>
+            </div>
+            <div className="mb-3">
+                <label className="form-label">Per judge progress:</label>
+                <progress className="form-control" style={{ width: '100%', height: '20px' }} />
+            </div>
         </div>
     );
 };

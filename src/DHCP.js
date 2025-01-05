@@ -4,7 +4,6 @@ import Options from './Options';
 import Scopes from './Scopes';
 import Reservation from './Reservation';
 import Restart from './Restart';
-
 function App() {
     return (
         <Routes>
@@ -18,5 +17,4 @@ function App() {
         </Routes>
     );
 }
-
 export default App;

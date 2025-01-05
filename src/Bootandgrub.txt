@@ -25,18 +25,8 @@ const BootandGRUB = () => {
     return (
         <div className="container mt-5">
             <nav className="navbar justify-content-center mb-4">
-                <button
-                    className={`btn mx-2 ${showComponents ? 'btn-success' : 'btn'}`}
-                    onClick={handleNetbootClick}
-                >
-                    Netboot
-                </button>
-                <button
-                    className={`btn mx-2 ${showMedia ? 'btn-primary' : 'btn'}`}
-                    onClick={handleMediaClick}
-                >
-                    Media
-                </button>
+                <button onClick={handleNetbootClick}>Netboot</button>
+                <button  onClick={handleMediaClick}>Media</button>
             </nav>
             <ul className="list list-unstyled">
                 {bootStages.map((stage, index) => (

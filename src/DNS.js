@@ -1,33 +1,29 @@
 import React, { useState } from 'react';
-import styles from './DNS.module.css';
 import OptionDNS from './OptionDNS.js';
 import HostDNS from './HostDNS.js';
-const DNS = () => {
-    const [component, setComponent] = useState(null);
 
-    const handleClick = (componentName) => {
-        if (componentName === 'OptionDNS') {
-            setComponent(<OptionDNS />);
-        } else if (componentName === 'HostDNS') {
-            setComponent(<HostDNS />);
-        }
-    };
+const DNS = () => {
+    const [activeComponent, setActiveComponent] = useState(null);
 
     return (
-        <div>
-            <nav>
-                <ul className={styles['nav-list']}>
-                    <li className={styles['nav-item']}>
-                        <button className={styles['nav-link']} onClick={() => handleClick('OptionDNS')}>OptionDNS</button>
-                    </li>
-                    <li className={styles['nav-item']}>
-                        <button className={styles['nav-link']} onClick={() => handleClick('HostDNS')}>HostDNS</button>
-                    </li>
-                </ul>
-            </nav>
-            {component}
+        <div className="container">
+            <button
+                className={`btn ${activeComponent === 'OptionDNS' ? 'active' : ''}`}
+                onClick={() => setActiveComponent('OptionDNS')}
+                style={{ color: activeComponent === 'OptionDNS' ? 'blue' : 'black' }}
+            >
+                OptionDNS
+            </button>
+            <button
+                className={`btn ${activeComponent === 'HostDNS' ? 'active' : ''}`}
+                onClick={() => setActiveComponent('HostDNS')}
+                style={{ color: activeComponent === 'HostDNS' ? 'red' : 'black' }}
+            >
+                HostDNS
+            </button>
+            {activeComponent === 'OptionDNS' && <OptionDNS />}
+            {activeComponent === 'HostDNS' && <HostDNS />}
         </div>
     );
 };
-
 export default DNS;

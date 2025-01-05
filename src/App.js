@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './Header.js';
-// import Sidebar from './Sidebar.js';
 import General from './General.js';
 import DHCP from './DHCP.js';
 import DNS from './DNS.js';
@@ -32,8 +31,7 @@ const App = () => {
           <>
             <Header />
             <div className={styles.container}>
-              {/* <Sidebar /> */}
-              <div className={styles.nav}>
+              <div className={`${styles.nav} nav-link active`}>
                 <Routes>
                   <Route path="/General" element={<General />} />
                   <Route path="/dhcp/*" element={<DHCP />} />

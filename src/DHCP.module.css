@@ -1,20 +1,20 @@
 /* DHCP.module.css */
 
 .navbar {
-    background-color: #343a40; /* Dark background color */
+    background-color: #a0aebe85; /* Dark background color */
     padding: 40px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px; /* Rounded corners */
-    border-size: 10px;
+    border-width: 10px;
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 10%;
     font-weight: bold;
-    color: #ffffff; /* White text color */
+    color: #000000; /* White text color */
 }
 
 .navbar-nav {
@@ -32,10 +32,14 @@
 
 .nav-link {
     text-decoration: none;
-    color: #ffffff; /* White text color */
+    color: #000000; /* White text color */
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #adb5bd; /* Light gray text color */
+    color: #306eab; /* Light gray text color */
+}
+
+.nav-link.active {
+    color: #ff0000; /* Color for the active link */
 }

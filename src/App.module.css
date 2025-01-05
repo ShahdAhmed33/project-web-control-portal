@@ -22,8 +22,8 @@
     padding: 20px; /* Adjust padding as needed */
     margin-top: 200px;
     margin-bottom: 20px;
-   padding-left: 200px;
-   padding-right: 200px;
+    padding-left: 200px;
+    padding-right: 200px;
     overflow-x: auto;
     white-space: nowrap;
     background-color: #ffffff6b;
@@ -31,7 +31,16 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better appearance */
     justify-content: center; /* Center items inside leftnav */
     justify-content: space-between;
-    border-radius:10%;
-
-
+    border-radius: 10%;
 }
+
+.nav-link:active {
+    color: blue; /* Change color when clicked */
+}
+
+.nav-link {
+    color: black; /* Default color */
+    text-decoration: none;
+    padding: 10px;
+}
+

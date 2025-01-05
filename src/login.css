@@ -1,7 +1,5 @@
 /* login.css */
-
   /* login.css */
-
 .login-container {
   display: flex;
   justify-content: center;
@@ -14,7 +12,6 @@
 
 
 }
-  
   .sidebar a {
     display: block;
     color: #333;
@@ -23,7 +20,6 @@
     border-radius: 4px;
     margin-bottom: 10px;
   }
-  
   .sidebar a:hover {
     background-color: #007bff;
     color: white;
@@ -41,19 +37,16 @@
     left: 0;
     z-index: 1000;
   }
-  
   .header h1 {
     margin: 0;
     font-size: 36px; /* Enlarged font size */
   }
-  
   .header nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
     font-size: 18px; /* Enlarged font size */
   }
-  
   .header nav a:hover {
     text-decoration: underline;
   }

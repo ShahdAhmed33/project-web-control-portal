@@ -12,14 +12,13 @@ const Login = ({ onLogin }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform login logic here
-    if (username === 'admin' && password === 'password') {
+    if (username === 'shahdahmed' && password === 'shahood' || username === 'shahdanwar' && password === 'shahoodanwar') {
       onLogin();
       navigate('/General'); // Navigate to the main application
     } else {
       alert('Invalid username or password');
     }
   };
-
   return (
     <div className="login-container">
       <div className="card" style={{ width: '750px', padding: '50px', backgroundColor: '#d3d3d3' }}>
@@ -67,5 +66,4 @@ const Login = ({ onLogin }) => {
     </div>
   );
 };
-
 export default Login;
